@@ -321,6 +321,8 @@ require('lazy').setup {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+      -- keybind to change colorschemes with telescope
+      vim.keymap.set('n', '<leader>t', ':Telescope colorscheme<CR>')
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -357,7 +359,7 @@ require('lazy').setup {
     },
     config = function()
       require('nvim-tree').setup {}
-      vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '<leader>m', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
     end,
   },
 
