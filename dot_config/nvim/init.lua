@@ -128,6 +128,10 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 --
+-- jk to go back to normal mode
+--
+vim.keymap.set('i', 'jk', '<ESC>')
+--
 -- Yank to system clipboard (need to install xclip on linux for this to work)
 --
 -- The 'unnamedplus' clipboard option up above combines both the system clipboard and the vim clipboard, so this is useless here (but good to know)
