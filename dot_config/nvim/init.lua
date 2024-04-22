@@ -132,6 +132,15 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 --
 vim.keymap.set('i', 'jk', '<ESC>')
 --
+-- split management
+vim.keymap.set('n', '<leader>v', '<C-w>v', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>h', '<C-w>s', { desc = 'Split window horizontally' })
+vim.keymap.set('n', '<leader>=', '<C-w>=', { desc = 'Make splits equal size' })
+vim.keymap.set('n', '<leader>x', '<cmd>close<CR>', { desc = 'Close current split' })
+--
+-- Clear highlights
+vim.keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
+--
 -- Yank to system clipboard (need to install xclip on linux for this to work)
 --
 -- The 'unnamedplus' clipboard option up above combines both the system clipboard and the vim clipboard, so this is useless here (but good to know)
