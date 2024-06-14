@@ -377,7 +377,14 @@ require('lazy').setup {
         },
       }
       vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+      vim.keymap.set('n', '<leader>nr', ':NvimTreeRefresh<CR>', { noremap = true, silent = true })
     end,
+  },
+
+  -- dressing, to make some UI elements look nicer
+  {
+    'stevearc/dressing.nvim',
+    event = 'VeryLazy',
   },
 
   -- tmux-navigator, to move between tmux panes from inside nvim
@@ -738,6 +745,11 @@ require('lazy').setup {
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+      -- require('tokyonight').setup {
+      --   on_colors = function(colors)
+      --     colors.bg = colors.bg_dark
+      --   end,
+      -- }
       vim.cmd.colorscheme 'tokyonight-night'
 
       -- You can configure highlights by doing something like
@@ -766,22 +778,28 @@ require('lazy').setup {
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      -- Simple and easy statusline.
-      --  You could remove this setup call if you don't like it,
-      --  and try some other statusline plugin
+      -- -- Simple and easy statusline.
+      -- --  You could remove this setup call if you don't like it,
+      -- --  and try some other statusline plugin
       local statusline = require 'mini.statusline'
       -- set use_icons to true if you have a Nerd Font
       statusline.setup { use_icons = vim.g.have_nerd_font }
-
-      -- You can configure sections in the statusline by overriding their
-      -- default behavior. For example, here we set the section for
-      -- cursor location to LINE:COLUMN
+      --
+      -- -- You can configure sections in the statusline by overriding their
+      -- -- default behavior. For example, here we set the section for
+      -- -- cursor location to LINE:COLUMN
       ---@diagnostic disable-next-line: duplicate-set-field
       statusline.section_location = function()
         return '%2l:%-2v'
       end
 
-      -- ... and there is more!
+      -- Set filepath to relative
+      statusline.section_filename = function()
+        local file = vim.fn.expand '%:~:.' -- This expands to the relative path
+        return file ~= '' and file or '[No Name]'
+      end
+
+      --.. and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
