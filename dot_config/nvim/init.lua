@@ -415,6 +415,35 @@ require('lazy').setup {
     -- this is equalent to setup({}) function
   },
 
+  -- blankline, to get indent lines
+  {
+    'lukas-reineke/indent-blankline.nvim',
+    event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
+    opts = {
+      indent = {
+        char = '│',
+        tab_char = '│',
+      },
+      scope = { show_start = false, show_end = false },
+      exclude = {
+        filetypes = {
+          'help',
+          'alpha',
+          'dashboard',
+          'neo-tree',
+          'Trouble',
+          'trouble',
+          'lazy',
+          'mason',
+          'notify',
+          'toggleterm',
+          'lazyterm',
+        },
+      },
+    },
+    main = 'ibl',
+  },
+
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
