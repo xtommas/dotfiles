@@ -22,13 +22,25 @@ return {
 		})
 		vim.keymap.set(
 			"n",
-			"<leader>n",
+			"<leader>e",
 			":NvimTreeToggle<CR>",
 			{ noremap = true, silent = true, desc = "Toggle file explorer" }
 		)
 		vim.keymap.set(
 			"n",
-			"<leader>nr",
+			"<leader>ef",
+			":NvimTreeFindFileToggle<CR>",
+			{ noremap = true, silent = true, desc = "Toggle file explorer on current file" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>ec",
+			":NvimTreeCollapse<CR>",
+			{ noremap = true, silent = true, desc = "Collapse file explorer" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>er",
 			":NvimTreeRefresh<CR>",
 			{ noremap = true, silent = true, desc = "Refresh file explorer" }
 		)
