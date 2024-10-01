@@ -54,3 +54,6 @@ vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 -- Move to the start/end of line
 vim.keymap.set("n", "gh", "_", { desc = "Go to beginning of line" })
 vim.keymap.set("n", "gl", "$", { desc = "Go to end of line" })
+
+-- Zen Mode (NoNeckPain)
+vim.keymap.set("n", "<leader>z", "<cmd>NoNeckPain<CR>", { desc = "Toggle NoNeckPain" })
