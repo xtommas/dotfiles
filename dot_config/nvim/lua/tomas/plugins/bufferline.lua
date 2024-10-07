@@ -18,8 +18,8 @@ return {
 			},
 			custom_filter = function(buf_number)
 				local buf_name = vim.fn.bufname(buf_number)
-				-- Check if the buffer name contains 'NvimTree_'
-				if buf_name:match("NvimTree_") then
+				-- Check if the buffer name contains 'NvimTree_' or is empty
+				if buf_name:match("NvimTree_") or buf_name == nil or buf_name == "" then
 					return false
 				end
 				return true
