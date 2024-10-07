@@ -34,6 +34,9 @@ return {
 			git = {
 				ignore = false,
 			},
+			diagnostics = {
+				enable = true,
+			},
 		})
 		vim.keymap.set(
 			"n",

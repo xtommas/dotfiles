@@ -26,6 +26,9 @@ return {
 				"vimdoc",
 			},
 			auto_install = true,
+			sync_install = false,
+			ignore_install = {},
+			modules = {},
 			highlight = { enable = true },
 			indent = { enable = true },
 		})

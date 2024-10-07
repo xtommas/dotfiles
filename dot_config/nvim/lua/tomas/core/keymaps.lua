@@ -28,10 +28,12 @@ vim.keymap.set("n", "<leader>=", "<C-w>=", { desc = "Make splits equal size" })
 vim.keymap.set("n", "<leader>x", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- Tabs
-vim.keymap.set("n", "<S-n>", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-vim.keymap.set("n", "<S-x>", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
-vim.keymap.set("n", "<S-l>", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
-vim.keymap.set("n", "<S-h>", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+vim.keymap.set("n", "<S-n>", "<cmd>tabnew<CR>", { desc = "Open new tab" })
+vim.keymap.set("n", "<S-x>", "<cmd>tabclose<CR>", { desc = "Close current tab" })
+vim.keymap.set("n", "<S-l>", "<cmd>tabn<CR>", { desc = "Go to next tab" })
+vim.keymap.set("n", "<S-h>", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
+vim.keymap.set("n", "<S-A-h>", "<cmd>-tabmove<CR>", { desc = "Move tab to the left" })
+vim.keymap.set("n", "<S-A-l>", "<cmd>+tabmove<CR>", { desc = "Move tab to the right" })
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- Center after page jumps
