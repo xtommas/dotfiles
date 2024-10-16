@@ -42,7 +42,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
@@ -111,10 +111,10 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybinds
-bindkey '^I' autosuggest-accept
+bindkey '^I^I' autosuggest-accept
 
 # Go stuff
-export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
@@ -123,3 +123,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Aliases
 alias python="python3"
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
