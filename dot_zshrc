@@ -167,3 +167,7 @@ alias python="python3"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+alias cd="z"
