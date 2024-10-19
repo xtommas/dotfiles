@@ -9,6 +9,7 @@ Backup for my config files for zsh, tmux, and Neovim using [chezmoi](https://www
 - [`lazygit`](https://github.com/jesseduffield/lazygit)
 - [`neovim`](https://github.com/neovim/neovim)
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep)
+- [`tmux`](https://github.com/tmux/tmux)
 - [`yay`](https://github.com/Jguer/yay)
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide)
 - [`zsh`](https://www.zsh.org/)
